@@ -4,6 +4,11 @@ from django.db import models
 from django.db import models
 
 class Student(models.Model):
+
+    @classmethod
+    def get_all(cls):
+        return cls.objects.all()
+
     SEX_ITEMS = [
         (1, '男'),
         (2, '女'),
